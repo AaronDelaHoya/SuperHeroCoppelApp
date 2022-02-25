@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutInfoHero"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/tbInfoHero"
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"
+           android:backgroundTint="@color/Red"
+           android:background="@color/Red"
+           app:titleTextColor="@color/white">
+       </androidx.appcompat.widget.Toolbar>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/tvHeroNameInfo"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:textAlignment="center"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="40dp"
+               tools:text="HeroName">
+           </TextView>
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:textAlignment="textStart"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="40dp"
+               android:text="Description">
+
+           </TextView>
+           <TextView
+               android:id="@+id/tvheroDescription"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="textStart"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="20dp"
+               tools:text="Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction!">
+           </TextView>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <fragment android:name="aaron.com.myapplication.ui.view.fragment.ComicListFragment"
+                   android:id="@+id/fragComicsList"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent" />
+
+               <fragment android:name="aaron.com.myapplication.ui.view.fragment.SeriesListFragment"
+                   android:id="@+id/fragSeriesList"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+
+               <Button
+                   android:id="@+id/btnComic"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Comics"
+                   android:textSize="20dp"
+                   android:backgroundTint="@color/Red"
+                   >
+
+               </Button>
+               <Button
+                   android:id="@+id/btnSeries"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Series"
+                   android:textSize="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:backgroundTint="@color/Blue">
+
+               </Button>
+
+           </LinearLayout>
+
+       </LinearLayout>
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
